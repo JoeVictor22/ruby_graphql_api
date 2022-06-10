@@ -38,5 +38,6 @@ rails
 rails generate
 rails generate serializer band
 
-
+# linter
+rubocop -a
 ```
