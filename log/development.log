@@ -52,3 +52,162 @@ Processing by BandsController#index as HTML
 Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 1084)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMembers (20220609015309)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "members" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "band_id" integer NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_a473560e3a"
+FOREIGN KEY ("band_id")
+  REFERENCES "bands" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_members_on_band_id" ON "members" ("band_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220609015309"]]
+  [1m[36mTRANSACTION (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMember Create (0.4ms)[0m  [1m[32mINSERT INTO "members" ("band_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["band_id", 1], ["name", "Angus Young"], ["created_at", "2022-06-09 01:54:43.184072"], ["updated_at", "2022-06-09 01:54:43.184072"]]
+  [1m[36mTRANSACTION (10.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/bands/1/members" for ::1 at 2022-06-08 22:56:20 -0300
+  
+SyntaxError (/home/joel/git/ruby_graphql_api/config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+    resources : members
+              ^
+/home/joel/git/ruby_graphql_api/config/routes.rb:9: syntax error, unexpected `end', expecting end-of-input):
+  
+config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+config/routes.rb:9: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:3: syntax error, unexpected ':', expecting `end'
+config/routes.rb:9: syntax error, unexpected `end', expecting end-of-input
+Started GET "/bands/1/members" for ::1 at 2022-06-08 22:56:33 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant MembersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/bands/1/membersq1" for ::1 at 2022-06-08 22:57:01 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/bands/1/membersq1"):
+  
+Started GET "/bands/1/members/1" for ::1 at 2022-06-08 22:57:06 -0300
+  
+ActionController::RoutingError (uninitialized constant MembersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMember Create (0.3ms)[0m  [1m[32mINSERT INTO "members" ("band_id", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["band_id", 1], ["name", "Angus Young2"], ["created_at", "2022-06-09 02:00:00.168885"], ["updated_at", "2022-06-09 02:00:00.168885"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/bands/1/members/1" for ::1 at 2022-06-08 23:00:09 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant MembersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/bands/1/members/1" for ::1 at 2022-06-08 23:00:09 -0300
+  
+ActionController::RoutingError (uninitialized constant MembersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/bands" for ::1 at 2022-06-08 23:55:22 -0300
+Processing by BandsController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 2140)
+
+
+  
+TypeError (wrong argument type Symbol (expected Module)):
+  
+app/controllers/bands_controller.rb:8:in `index'
+Started GET "/bands" for ::1 at 2022-06-08 23:56:36 -0300
+Processing by BandsController#index as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 1326)
+
+
+  
+TypeError (wrong argument type Symbol (expected Module)):
+  
+app/controllers/bands_controller.rb:8:in `index'
+Started GET "/bands" for ::1 at 2022-06-08 23:56:38 -0300
+Processing by BandsController#index as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 119)
+
+
+  
+TypeError (wrong argument type Symbol (expected Module)):
+  
+app/controllers/bands_controller.rb:8:in `index'
+Started GET "/bands" for ::1 at 2022-06-08 23:56:38 -0300
+Processing by BandsController#index as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 105)
+
+
+  
+TypeError (wrong argument type Symbol (expected Module)):
+  
+app/controllers/bands_controller.rb:8:in `index'
+Started GET "/bands" for ::1 at 2022-06-08 23:56:46 -0300
+Processing by BandsController#index as HTML
+Completed 500 Internal Server Error in 2ms (Allocations: 1328)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1+)):
+  
+app/controllers/bands_controller.rb:8:in `index'
+Started GET "/bands" for ::1 at 2022-06-09 00:00:02 -0300
+Processing by BandsController#index as HTML
+Completed 500 Internal Server Error in 3ms (Allocations: 2005)
+
+
+  
+NoMethodError (undefined method `include' for nil:NilClass
+
+    render json: @band.include[:Members], only: [:name]
+                      ^^^^^^^^):
+  
+app/controllers/bands_controller.rb:8:in `index'
+Started GET "/bands" for ::1 at 2022-06-09 00:00:06 -0300
+Processing by BandsController#index as HTML
+Completed 200 OK in 2ms (Views: 0.2ms | Allocations: 1388)
+
+
+Started GET "/bands" for ::1 at 2022-06-09 00:00:09 -0300
+Processing by BandsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/bands_controller.rb:8:in `index'
+  [1m[36mBand Load (0.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 1.1ms | Allocations: 5860)
+
+
