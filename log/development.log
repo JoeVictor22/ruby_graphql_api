@@ -211,3 +211,33 @@ Processing by BandsController#index as HTML
 Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 1.1ms | Allocations: 5860)
 
 
+Started GET "/bands" for ::1 at 2022-06-11 19:59:22 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 200 OK in 27ms (Views: 16.4ms | ActiveRecord: 0.8ms | Allocations: 10459)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-06-11 19:59:22 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/bands" for ::1 at 2022-06-11 20:01:02 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 1]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 2]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 3]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.4ms)
+Completed 200 OK in 64ms (Views: 55.5ms | ActiveRecord: 2.3ms | Allocations: 21579)
+
+
