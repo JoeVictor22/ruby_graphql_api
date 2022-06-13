@@ -241,3 +241,99 @@ Processing by BandsController#index as HTML
 Completed 200 OK in 64ms (Views: 55.5ms | ActiveRecord: 2.3ms | Allocations: 21579)
 
 
+Started GET "/bands" for ::1 at 2022-06-12 22:15:16 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 1]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 2]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.2ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 3]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (31.13ms)
+Completed 200 OK in 64ms (Views: 55.1ms | ActiveRecord: 1.9ms | Allocations: 22311)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-06-12 22:15:16 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/bands" for ::1 at 2022-06-12 22:16:21 -0300
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 1]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 2]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 3]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::JsonApi (6.53ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 5173)
+
+
+Started GET "/bands" for ::1 at 2022-06-12 22:17:26 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BandsController#index as HTML
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.3ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 1]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 2]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers]   [1m[36mMember Load (0.1ms)[0m  [1m[34mSELECT "members".* FROM "members" WHERE "members"."band_id" = ?[0m  [["band_id", 3]]
+[active_model_serializers]   ↳ app/controllers/bands_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.45ms)
+Completed 200 OK in 52ms (Views: 44.3ms | ActiveRecord: 1.9ms | Allocations: 19858)
+
+
+Started GET "/rails/info/routes" for ::1 at 2022-06-12 22:52:26 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/layouts/application.html.erb
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (Duration: 79.6ms | Allocations: 6423)
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 4.3ms | Allocations: 1152)
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 89.3ms | Allocations: 11596)
+  Rendered layout /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/layouts/application.html.erb (Duration: 90.7ms | Allocations: 11943)
+Completed 200 OK in 105ms (Views: 93.5ms | Allocations: 15722)
+
+
+Started GET "/rails/info/routes" for ::1 at 2022-06-12 22:54:25 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/layouts/application.html.erb
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (Duration: 13.8ms | Allocations: 6442)
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.7ms | Allocations: 1152)
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 19.7ms | Allocations: 11647)
+  Rendered layout /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/layouts/application.html.erb (Duration: 20.5ms | Allocations: 11994)
+Completed 200 OK in 27ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 15440)
+
+
+Started GET "/rails/info/routes" for ::1 at 2022-06-12 22:55:24 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/layouts/application.html.erb
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (Duration: 9.9ms | Allocations: 6258)
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.4ms | Allocations: 866)
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 17.9ms | Allocations: 10621)
+  Rendered layout /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/layouts/application.html.erb (Duration: 18.6ms | Allocations: 10919)
+Completed 200 OK in 21ms (Views: 20.2ms | Allocations: 11774)
+
+
+Started GET "/rails/info/routes" for ::1 at 2022-06-12 22:58:09 -0300
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/layouts/application.html.erb
+  Rendering /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [49 times] (Duration: 14.7ms | Allocations: 7866)
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/actionpack-7.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.3ms | Allocations: 197)
+  Rendered /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 21.2ms | Allocations: 12147)
+  Rendered layout /usr/local/lib/ruby/gems/3.1.0/gems/railties-7.0.3/lib/rails/templates/layouts/application.html.erb (Duration: 21.8ms | Allocations: 12247)
+Completed 200 OK in 23ms (Views: 22.6ms | Allocations: 12583)
+
+
